@@ -3,3 +3,295 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/*MOBILE-FIRST*/
+
+/*LAYOUT*/
+
+.container {
+    background-color: beige;
+    height: 100vh;
+}
+
+.left {
+    display: none;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.right .contact {
+    height: 10%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.right .contact .col-left {
+    width: 20%;
+}
+
+.right .contact img {
+    width: 100%;
+}
+
+.right .conversation {
+    height: 80%;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.right .conversation .content {
+    width: 90%;
+}
+
+.right .conversation ul {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right .conversation li {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.right .conversation .green-message {
+    justify-content: end;
+}
+
+.right .conversation .white-message {
+    justify-content: start;
+}
+
+.right .conversation li p {
+    width: 70%;
+}
+
+.right .conversation .green-message p {
+    background-color: lightgreen;
+}
+
+.right .conversation .white-message p {
+    background-color: white;
+}
+
+.right .message {
+    height: 10%;
+    background-color: cadetblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .message input {
+    width: 95%;
+    margin: auto;
+    height: 80%;
+}
+
+/*STYLE*/
+
+
+
+
+
+/*RESPONSIVE LAYOUT*/
+
+/*TABLET*/
+
+@media screen and (min-width: 768px) {
+
+    .container {
+        display: flex;
+    }
+    
+    .left {
+        display: block;
+        width: 10%;
+    }
+
+    .left .info {
+        display: block;
+        height: 10%;
+    }
+
+    .left .info .col-left {
+        display: block;
+    }
+
+    .left .notifications {
+        display: none;
+    }
+
+    .left .search {
+        display: none;
+    }
+
+    .left .chat {
+        display: block;
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .left .chat .col-left {
+        width: 100%;
+    }
+
+    .left .col-left img {
+        width: 100%;
+    }
+
+    .left .chat .col-right {
+        display: none;
+    }
+
+    .right {
+        width: 90%;
+    }
+
+    .right .contact .col-left {
+        width: 10%;
+    }
+
+    .right .conversation {
+        overflow: scroll;
+    }
+
+}
+
+
+/*DESKTOP*/
+
+@media screen and (min-width: 1024px) {
+    
+    .background {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: lightgray;
+    }
+    
+    .background:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        background: green;
+        z-index: 1;
+    }
+    
+    .container {
+        height: 90vh;
+        width: 80vw;
+        background-color: beige;
+        display: flex;
+        z-index: 3;
+    }
+    
+    .right {
+        width: 70%;
+        background-color: blueviolet;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .left {
+        display: block;
+        width: 30%;
+        background-color: brown;
+    }
+
+    .left .info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .left .info .col-left {
+        width: 20%;
+    }
+
+    .left .info .col-right {
+        display: block;
+        width: 80%;
+    }
+
+    .left .info {
+        height: 10%;
+        background-color: chocolate;
+    }
+
+    .left .notifications {
+        display: block;
+        height: 10%;
+        background-color: coral;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .left .notifications .col-left {
+        width: 20%;
+    }
+
+    .left .notifications .col-right {
+        width: 80%;
+    }
+
+    .left .search {
+        display: block;
+        height: 5%;
+        background-color: darkviolet;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left .search input {
+        width: 95%;
+        height: 80%;
+    }
+
+    .left .chat {
+        display: block;
+        height: 75%;
+        background-color: darkred;
+        overflow: scroll;
+    }
+
+    .left .chat .row {
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+    }
+
+    .left .chat .col-left {
+        width: 20%;
+    }
+
+    .left .chat .col-left img {
+        width: 100%;
+    }
+    
+    .left .chat .col-right {
+        display: block;
+        width: 80%;
+    }
+
+}
+
+
+
