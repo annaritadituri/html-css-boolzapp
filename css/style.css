@@ -243,6 +243,7 @@
 
     .left .col-left img {
         width: 100%;
+        height: 100%;
     }
 
     /*Sezione info*/
@@ -258,6 +259,10 @@
 
     .left .info .col-left {
         display: block;
+    }
+
+    .left .info .col-right {
+        display: none;
     }
 
     .left .info .icon {
@@ -299,6 +304,9 @@
 
     .left .info {
         background-color: rgb(235, 235, 235);
+    }
+
+    .left .info .col-left .icon {
         padding: 1rem;
     }
 
@@ -306,11 +314,15 @@
         border-radius: 50%;
     }
 
+
     /*Sezione chat*/
+
+    .left .chat .row {
+        border-bottom: 1px solid lightgray;
+    }
 
     .left .chat .col-left .icon {
         padding: 1rem;
-        border-bottom: 1px solid lightgray;
     }
 
     .left .chat .col-left .icon img {
@@ -374,7 +386,6 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
-        background-color: lightgray;
     }
     
     .background:before {
@@ -384,16 +395,24 @@
         left: 0;
         width: 100%;
         height: 20%;
-        background: green;
         z-index: 1;
     }
     
     .container {
         height: 90vh;
         width: 80vw;
-        background-color: beige;
         display: flex;
         z-index: 3;
+    }
+
+    /*STYLE*/
+
+    .background {
+        background-color: rgb(224, 224, 213);
+    }
+
+    .background:before {
+        background: rgb(0, 139, 125);
     }
 
 
@@ -404,7 +423,6 @@
     .left {
         display: block;
         width: 30%;
-        background-color: brown;
     }
 
     /*Sezione info*/
@@ -413,28 +431,24 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        height: 10%;
+        justify-content: space-between;
+        height: 90px;
     }
 
     .left .info .col-left {
-        width: 20%;
+        width: 90px;
     }
 
     .left .info .col-right {
         display: block;
-        width: 80%;
     }
 
-    .left .info {
-        background-color: chocolate;
-    }
 
     /*Sezione notifications*/
 
     .left .notifications {
         display: block;
         height: 10%;
-        background-color: coral;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -442,6 +456,10 @@
 
     .left .notifications .col-left {
         width: 20%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .left .notifications .col-right {
@@ -453,14 +471,25 @@
     .left .search {
         display: block;
         height: 5%;
-        background-color: darkviolet;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
+    .left .search .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        height: 100%;
+    }
+
     .left .search input {
         width: 95%;
+        height: 80%;
+    }
+
+    .left .search i {
         height: 80%;
     }
 
@@ -469,14 +498,15 @@
     .left .chat {
         display: block;
         height: 75%;
-        background-color: darkred;
         overflow: scroll;
     }
 
     .left .chat .row {
         display: flex;
         flex-direction: row;
+        align-items: center;
         height: 100px;
+        position: relative;
     }
 
     .left .chat .col-left {
@@ -492,8 +522,96 @@
         width: 80%;
     }
 
-     /*STYLE*/
+    .left .chat .col-right span {
+        position: absolute;
+        right: 10px;
+        top: 30px;
+    }
 
+
+    /*STYLE*/
+
+    .left {
+        background-color: white;
+    }
+
+    /*Sezione info*/
+
+    .left .info .col-right i {
+        font-size: 1.5rem;
+        color:  rgb(148, 148, 148);
+        padding-right: 1rem;
+    }
+
+    /*Sezione notifications*/
+
+    .left .notifications {
+        background-color: rgb(122, 213, 249);
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .left .notifications .col-left {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .left .notifications .col-left i {
+        color: rgb(122, 213, 249);
+        font-size: 2rem;
+        background-color: white;
+        border-radius: 50%;
+        padding: 1rem 0.8rem 1rem 0.8rem;
+    }
+
+    .left .notifications .col-right h3 {
+        font-weight: 300;
+    }
+
+    .left .notifications .col-right a:visited {
+        color: gray;
+    }
+
+    /*Sezione search*/
+
+    .left .search {
+        background-color: rgb(244, 244, 244);
+    }
+
+    .left .search i {
+        background-color: white;
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        color:  rgb(148, 148, 148);
+        padding-top: 0.3rem;
+    }
+
+    .left .search input {
+        border: none;
+    }
+
+    /*Sezione chat*/
+
+    .left .chat .col-left .icon {
+        padding: 0.5rem;
+    }
+
+    .left .chat .col-right h1 {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    .left .chat .col-right p {
+        color: rgb(179, 179, 179);
+    }
+
+    .left .chat .col-right span {
+        color: rgb(179, 179, 179);
+        font-size: 0.8rem;
+    }
+
+    /**/
 
     /*Colonna di destra*/
 
@@ -501,7 +619,6 @@
 
     .right {
         width: 70%;
-        background-color: blueviolet;
         display: flex;
         flex-direction: column;
         height: 100%;
