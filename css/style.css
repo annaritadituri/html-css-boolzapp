@@ -33,6 +33,8 @@
     height: 100%;
 }
 
+/*Sezione contact*/
+
 .right .contact {
     height: 90px;
     display: flex;
@@ -45,6 +47,14 @@
     height: 100%;
 }
 
+.right .contact .col-right {
+    width: calc(100% - 90px);
+}
+
+.right .contact .col-right .attachment {
+    display: none;
+}
+
 .right .contact .col-left .icon {
     height: 100%;
     text-align: center;
@@ -54,6 +64,8 @@
     width: 100%;
     height: 100%;
 }
+
+/*Sezione conversation*/
 
 .right .conversation {
     height: calc(100% - 90px - 10%);
@@ -99,9 +111,23 @@
     right: 10px;
 }
 
+.right .conversation li p .time {
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+}
+
+/*Sezione message*/
+
 .right .message {
     height: 10%;
+}
+
+.right .message .content {
+    height: 100%;
+    width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -112,11 +138,11 @@
     height: 80%;
 }
 
-/*STYLE*/
-
-.right .conversation {
-    background-image: url(../img/mine.jpg);
+.right .message i {
+    display: none;
 }
+
+/*STYLE*/
 
 /*Sezione contact*/
 
@@ -140,6 +166,10 @@
 
 /*Sezione conversation*/
 
+.right .conversation {
+    background-image: url(../img/mine.jpg);
+}
+
 .right .conversation .content {
     margin-top: 1.5rem;
 }
@@ -150,7 +180,12 @@
 
 .right .conversation ul li p {
     padding: 1rem;
-    border-radius: 10%;
+    border-radius: 10px;
+}
+
+.right .conversation ul li p .time {
+    font-size: 0.8rem;
+    color: grey;
 }
 
 .right .conversation .green-message p {
@@ -203,37 +238,54 @@
     
     .left {
         display: block;
-        width: 10%;
+        width: 90px;
     }
+
+    .left .col-left img {
+        width: 100%;
+    }
+
+    /*Sezione info*/
 
     .left .info {
         display: block;
-        height: 10%;
+        height: 90px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 
     .left .info .col-left {
         display: block;
     }
 
+    .left .info .icon {
+        height: 100%;
+    }
+
+    /*Sezione notifications*/
+
     .left .notifications {
         display: none;
     }
+
+    /*Sezione search*/
 
     .left .search {
         display: none;
     }
 
+    /*Sezione chat*/
+
     .left .chat {
         display: block;
         width: 100%;
+        height: calc(100% - 90px);
         overflow: scroll;
     }
 
     .left .chat .col-left {
-        width: 100%;
-    }
-
-    .left .col-left img {
         width: 100%;
     }
 
@@ -242,6 +294,28 @@
     }
 
     /*STYLE*/
+
+    /*Sezione info*/
+
+    .left .info {
+        background-color: rgb(235, 235, 235);
+        padding: 1rem;
+    }
+
+    .left .info .col-left img {
+        border-radius: 50%;
+    }
+
+    /*Sezione chat*/
+
+    .left .chat .col-left .icon {
+        padding: 1rem;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .left .chat .col-left .icon img {
+        border-radius: 50%;
+    }
 
 
     /*Colonna di destra*/
@@ -252,12 +326,39 @@
         width: calc(100% - 90px);
     }
 
-    .right .contact .col-left {
-        width: 90px;
+    /*Sezione contact*/
+
+    .right .contact .col-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
+
+    .right .contact .col-right .attachment {
+        display: block;
+    }
+
+    /*Sezione message*/
+
+    .right .message i {
+        display: block;
+        font-size: 2rem;
+        color: rgb(105, 105, 105);
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
 
     /*STYLE*/
 
+    /*Sezione contact*/
+
+    .right .contact .col-right .attachment > * {
+        color: rgb(148, 148, 148);
+        padding-right: 1rem;
+        font-size: 1.5rem;
+    }
 
 }
 
@@ -306,10 +407,13 @@
         background-color: brown;
     }
 
+    /*Sezione info*/
+
     .left .info {
         display: flex;
         flex-direction: row;
         align-items: center;
+        height: 10%;
     }
 
     .left .info .col-left {
@@ -322,9 +426,10 @@
     }
 
     .left .info {
-        height: 10%;
         background-color: chocolate;
     }
+
+    /*Sezione notifications*/
 
     .left .notifications {
         display: block;
@@ -343,6 +448,8 @@
         width: 80%;
     }
 
+    /*Sezione search*/
+
     .left .search {
         display: block;
         height: 5%;
@@ -356,6 +463,8 @@
         width: 95%;
         height: 80%;
     }
+
+    /*Sezione chat*/
 
     .left .chat {
         display: block;
