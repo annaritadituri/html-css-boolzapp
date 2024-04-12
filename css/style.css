@@ -9,13 +9,23 @@
 /*LAYOUT*/
 
 .container {
-    background-color: beige;
     height: 100vh;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
 }
+
+/*Colonna di sinistra*/
+
+/*LAYOUT*/
 
 .left {
     display: none;
 }
+
+
+/*Colonna di destra*/
+
+/*LAYOUT*/
 
 .right {
     display: flex;
@@ -24,27 +34,33 @@
 }
 
 .right .contact {
-    height: 10%;
-    background-color: aqua;
+    height: 90px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
 .right .contact .col-left {
-    width: 20%;
+    width: 90px;
+    height: 100%;
+}
+
+.right .contact .col-left .icon {
+    height: 100%;
+    text-align: center;
 }
 
 .right .contact img {
     width: 100%;
+    height: 100%;
 }
 
 .right .conversation {
-    height: 80%;
-    background-color: blue;
+    height: calc(100% - 90px - 10%);
     display: flex;
     flex-direction: row;
     justify-content: center;
+    overflow: scroll;
 }
 
 .right .conversation .content {
@@ -74,19 +90,17 @@
 
 .right .conversation li p {
     width: 70%;
+    position: relative;
 }
 
-.right .conversation .green-message p {
-    background-color: lightgreen;
-}
-
-.right .conversation .white-message p {
-    background-color: white;
+.right .conversation li i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 .right .message {
     height: 10%;
-    background-color: cadetblue;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,8 +114,75 @@
 
 /*STYLE*/
 
+.right .conversation {
+    background-image: url(../img/mine.jpg);
+}
+
+/*Sezione contact*/
+
+.right .contact {
+    background-color: rgb(235, 235, 235);
+}
+
+.right .contact .col-left .icon {
+    padding: 1rem;
+}
+
+.right .contact .icon img{
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.right .contact h1 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/*Sezione conversation*/
+
+.right .conversation .content {
+    margin-top: 1.5rem;
+}
+
+.right .conversation ul li {
+    margin-bottom: 0.5rem;
+}
+
+.right .conversation ul li p {
+    padding: 1rem;
+    border-radius: 10%;
+}
+
+.right .conversation .green-message p {
+    background-color: rgb(201, 248, 183);
+}
+
+.right .conversation .white-message p {
+    background-color: white;
+}
+
+.right .conversation ul li i {
+    height: 20px;
+    width: 20px;
+    color: gray;
+    font-size: 1rem;
+}
+
+/*Sezione message*/
+
+.right .message {
+    background-color: rgb(242, 235, 232);
+}
+
+.right .message input {
+    padding-left: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+}
 
 
+/*************************************************/
 
 
 /*RESPONSIVE LAYOUT*/
@@ -110,9 +191,15 @@
 
 @media screen and (min-width: 768px) {
 
+    /*LAYOUT*/
+
     .container {
         display: flex;
     }
+
+    /*Colonna di sinistra*/
+
+    /*LAYOUT*/
     
     .left {
         display: block;
@@ -154,17 +241,23 @@
         display: none;
     }
 
+    /*STYLE*/
+
+
+    /*Colonna di destra*/
+
+    /*LAYOUT*/
+
     .right {
-        width: 90%;
+        width: calc(100% - 90px);
     }
 
     .right .contact .col-left {
-        width: 10%;
+        width: 90px;
     }
 
-    .right .conversation {
-        overflow: scroll;
-    }
+    /*STYLE*/
+
 
 }
 
@@ -172,6 +265,8 @@
 /*DESKTOP*/
 
 @media screen and (min-width: 1024px) {
+
+    /*LAYOUT*/
     
     .background {
         display: flex;
@@ -199,14 +294,11 @@
         display: flex;
         z-index: 3;
     }
-    
-    .right {
-        width: 70%;
-        background-color: blueviolet;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
+
+
+    /*Colonna di sinistra*/
+
+    /*LAYOUT*/
 
     .left {
         display: block;
@@ -290,6 +382,23 @@
         display: block;
         width: 80%;
     }
+
+     /*STYLE*/
+
+
+    /*Colonna di destra*/
+
+    /*LAYOUT*/
+
+    .right {
+        width: 70%;
+        background-color: blueviolet;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    /*STYLE*/
 
 }
 
